@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: #f0f2f5;
+     margin: 0.5rem;
+     font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+     font-size: 16px;
+}
+header{
+    text-align: center;
+}
+img{
+    width: 300px;
+    height: 100px;
+}
+h2{
+    padding: 4px;
+}
+.fhead p{
+    color: #747373;
+    font-size: 15px;
+}
+.fhead{
+    text-align: center;
+    padding: 10px;
+}
+hr{
+    height: 1px;
+    background-color: #e0e0e0c7;
+    border: none;
+}
+.c1{
+    margin: auto;
+    border: 1px solid rgba(206, 206, 206, 0.404);
+    max-width: 450px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    height: 600px;
+}
+.form{
+    padding: 1rem;
+}
+input[type=text],[type=password]{
+    height: 40px;
+    border-width: 2px;
+    border: 0.5px solid rgb(199, 198, 198);
+    border-radius: 5px;
+    padding-left: 12px;
+    font-size: 15px;
+    margin:1px 0 10px 0;
+}
+input::placeholder{
+    color: #9c9c9c;
+}
+.name input{
+    width: 200px;
+    margin-bottom: 12px;
+}
+.dob{
+    font-size: 12px;
+}
+.dob1 label{
+    color: #606770;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.dob2 select {
+    width: 125px;
+    height: 36px;
+    color: #000000;
+    border: 0.5px solid rgb(199, 198, 198);
+    border-radius: 4px;
+    padding-left: 7px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 8px;
+    margin-left: 2px;
+    line-height: 20px;
+    padding-right: 40px; 
+    margin-bottom: 12px;
+}
+input[type=text]:focus,
+.dob2 select:focus {
+    outline: none;
+    border: 2px solid;
+    border-color: #000000;
+}
+.gen1 .gender{
+    color: #606770;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 4px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.female, .male, .custom{
+    width: 130px;
+    height: 36px;
+    color: #000000;
+    border: 0.5px solid rgb(199, 198, 198);
+    border-radius: 4px;
+    padding-left: 7px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 8px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.gen2 label{
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 28px 0 10px;
+}
+.gen2 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; 
+    justify-content: space-between; 
+}
+.male label{
+    width: 75%;
+}
+.ph input, .pass input{
+    width: 412px;
+}
+.para{
+    margin-top: 12px;
+    font-size: 11px;
+    color: #606770;
+    width: 399px;
+}
+.para a{
+    text-decoration: none;
+    color: #385898;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+.butt{
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    max-width: 200px;
+    margin: auto;
+    color: #1c1e21;
+    margin-top: 22px;
+}
+.butt button{
+    font-family: Helvetica, Arial, sans-serif !important;
+    display: inline-block;
+    height: 36px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00a400;
+    border: none;
+    border-radius: 6px;
+    vertical-align: middle;
+    margin-bottom: 18px;
+}
+button:hover{
+    color: #f1f1f1;
+    background-color: #01a001fa;
+    cursor: pointer;
+}
+.last-a{
+    text-align: center;
+    padding: 10px;
+}
+.last-a a{
+    color: #1877f2;
+    text-decoration: none;
+    position: relative;
+    font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
