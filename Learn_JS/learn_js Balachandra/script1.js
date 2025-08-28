@@ -13,14 +13,11 @@ array.push("A");
 
 array.unshift("B");
 
-console.log(array.join());
+const myarray=array.join()
 
-array.split(",");
+console.log(myarray);
 
-console.log(array.split(","));
-
-console.log(array);
-
+console.log(myarray.split(","));
 
 console.log(array.reverse(1,2));
 
