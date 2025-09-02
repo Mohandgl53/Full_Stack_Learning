@@ -35,13 +35,13 @@
     <script>
         function func(){
             var value=document.getElementById('name').value;
-            document.getElementById('display').innerHTML=value;
+            document.getElementById('display').textContent=value;
             if (value==="Mohan Kumar"){
                 alert("You are an Admin");
             }
         }
         function color(val){
-            document.getElementById('color').style.backgroundColor=val
+            document.getElementById('color').style.backgroundColor=val;
         }
     </script>
 </html>

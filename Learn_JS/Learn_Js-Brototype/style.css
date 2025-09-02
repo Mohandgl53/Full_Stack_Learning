@@ -23,9 +23,13 @@ a{
     color: #ffffff;
 }
 a:hover{
+    color: black;
+}
+li:hover{
     text-decoration: underline;
     color: black;
     background-color: #ffffff;
+    
 }
 .js-learn{
     width: 300px;
