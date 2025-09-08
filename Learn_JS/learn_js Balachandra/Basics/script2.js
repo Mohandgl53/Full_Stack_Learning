@@ -87,7 +87,7 @@ class specialPizza extends Pizza{
     }
 }
 
-const mySpecialPizza = new specialPizza("medium");
+var mySpecialPizza = new specialPizza("medium");
 
 mySpecialPizza.slice();
 
@@ -117,7 +117,7 @@ class specialPizza extends Pizza{
     }
 }
 
-const mySpecialPizza = new specialPizza("medium");
+let mySpecialPizza = new specialPizza("medium");
 
 mySpecialPizza.slice();
 

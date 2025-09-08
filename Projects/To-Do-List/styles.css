@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(174, 217, 255);
+}
+
+.taskManager{
+    width: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: "Roboto";
+}
+
+#heading{
+    margin: 5px 0 10px 0;
+    color: rgb(21, 106, 204);
+    font-weight: 600;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.inputText{
+    width: 230px;
+    height: 38px;
+    border: 2px solid rgb(52, 155, 252);
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+.addtask{
+    width: 80px;
+    height: 36px;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    border: 0px solid rgb(86, 170, 248);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.addtask:hover{
+    background-color: #0b76ef;
+}
+
+.taskArea{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid rgb(230, 228, 228);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.inputTick{
+    margin: 0 15px;
+}
+.taskArea p{
+    width: 230px;
+    text-align: center;
+}
+
+.remove{
+    width: 65px;
+    height: 28px;
+    background-color: rgb(255, 59, 59);
+    color: white;
+    border: 0px ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove:hover{
+    background-color: rgb(255, 1, 1);
+}
+
+
+.update {
+  width: 65px;
+  height: 28px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.update:hover {
+  background-color: darkorange;
+}
+
+.editInput {
+  width: 230px;
+  height: 28px;
+  padding: 4px 8px;
+  border: 1px solid #0b76ef;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+
