@@ -1,100 +1,81 @@
-
-
-
-
-
-
-
-
-
-
 "use strict";
 
-const taskManager = document.querySelector(".taskManager");
-const myInput = document.querySelector(".inputText");
-const form = document.querySelector(".form");
+const taskManager=document.querySelector(".taskManager");
+const myForm =document.querySelector("form");
+const inputText =document.querySelector(".inputText");
+inputText.focus();//to focus the input
 
-// Prevent page reload on form submit
-form.addEventListener("submit", function (e) {
+myForm.addEventListener("submit",(e)=>{
   e.preventDefault();
   addTask();
 });
 
-// Function to create a new task
-const addTask = () => {
-  const myTask = myInput.value.trim();
-
-  if (myTask === "") {
-    alert("Please enter a task!");
+const addTask = ()=>{
+  const inputContent=inputText.value.trim()
+  
+  if (inputContent===""){
+    alert("Please Enter the input Value For the Task")
     return;
   }
 
-  // Create task container
-  const taskBox = document.createElement("div");
-  taskBox.classList.add("taskArea");
+  const taskBar=document.createElement("div");
+  taskBar.classList.add("taskArea");
 
-  // Checkbox
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.classList.add("inputTick");
+  const checkBox=document.createElement("input");
+  checkBox.type="checkbox";
+  checkBox.classList.add("inputTick")
 
-  // Task text
-  const p = document.createElement("p");
-  p.classList.add("taskText");
-  p.textContent = myTask;
+  const taskPara=document.createElement("p");
+  taskPara.classList.add("taskpara");
+  taskPara.textContent=inputContent;
 
-  // Strike-through when checked
-  checkbox.addEventListener("change", () => {
-    p.style.textDecoration = checkbox.checked ? "line-through" : "none";
-    p.style.color = checkbox.checked ? "gray" : "black";
+  checkBox.addEventListener("change",()=>{
+    taskPara.style.textDecoration=checkBox.checked?"line-through":"none";
+    taskPara.style.color=checkBox.checked?"grey":"black";
+    inputText.focus();
   });
 
-  // ✅ Inline Update button
-  const updateBtn = document.createElement("button");
-  updateBtn.textContent = "Edit";
+  const updateBtn=document.createElement("button");
   updateBtn.classList.add("update");
-  updateBtn.addEventListener("click", () => {
-    // Create input field with current text
-    const input = document.createElement("input");
-    input.type = "text";
-    input.value = p.textContent;
+  updateBtn.textContent="Edit";
+  
+  updateBtn.addEventListener("click",()=>{
+    // const updatedTask=prompt("Update Your Task Here..",taskPara.textContent);
+    // taskPara.textContent=updatedTask;
+    const input=document.createElement("input");
+    input.type="text";
     input.classList.add("editInput");
+    input.value=taskPara.textContent;
 
-    // Replace <p> with input
-    taskBox.replaceChild(input, p);
+    taskBar.replaceChild(input,taskPara);
 
-    // Save changes on blur or Enter key
-    input.addEventListener("blur", () => {
-      p.textContent = input.value.trim() || p.textContent;
-      taskBox.replaceChild(p, input);
+    input.addEventListener("blur",()=>{
+      taskPara.textContent=input.value.trim()||taskPara.textContent;
+      taskBar.replaceChild(taskPara,input);
+      inputText.focus();
     });
 
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        input.blur(); // triggers blur event
+    input.addEventListener("keydown",(e)=>{
+      if(e.key==="Enter"){
+        input.blur();
       }
-    });
-
+    })
     input.focus();
   });
 
-  // Remove button
-  const removeBtn = document.createElement("button");
-  removeBtn.textContent = "Remove";
+  const removeBtn=document.createElement("button");
   removeBtn.classList.add("remove");
-  removeBtn.addEventListener("click", () => {
-    taskBox.remove();
-  });
+  removeBtn.textContent="Remove";
 
-  // Assemble task
-  taskBox.appendChild(checkbox);
-  taskBox.appendChild(p);
-  taskBox.appendChild(updateBtn);
-  taskBox.appendChild(removeBtn);
+  removeBtn.addEventListener("click",()=>{
+      taskBar.remove();
+      inputText.focus();
+  })
 
-  // Add to task manager
-  taskManager.appendChild(taskBox);
+  taskBar.append(checkBox,taskPara,updateBtn,removeBtn);
+  taskManager.append(taskBar);
 
-  // Clear input
-  myInput.value = "";
+  inputText.value="";
+
+  inputText.focus();
 };
