@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    top: 0;
+    margin: 200px auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 1100px;
+    font-family: Roboto;
+    text-align: center;
+}
+:root{
+    --DARKBLUE-COLOR:"rgb(41, 41, 41)";
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+}
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.logo img{
+    width: 250px;
+    height: 60px;
+    margin-left: 50px;
+}
+nav{
+    width: 650px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+nav ul{
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    font-size: 20px;
+    color: var(--DARKBLUE-COLOR);
+}
+
+nav li{
+    width: 140px;
+    text-align: center;
+    line-height: 65px;
+    cursor: pointer;
+}
+
+nav a{
+    display: block;
+    height: 65px;
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+    font-weight: 500;
+    font-size: 21px;
+}
+/*Home Section*/
+#Home{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 80px 120px;
+    align-items: center;
+    border-bottom: 1px grey solid;
+}
+.homeClass{
+    margin: 0 20px;
+}
+.Profile-content{
+    width: 500px;
+    height: 300px;
+    color: white;
+    text-align: start;
+    margin-top: 100px;
+}
+
+.Profile-content h1{
+    display: inline-block;
+    font-size: 45px;
+    line-height: 60px;
+    margin-bottom: 7px;
+}
+
+.Profile-content .designation{
+    line-height: 55px;
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.Profile-content .bio{
+    line-height: 28px;
+    font-size: 17px;
+    font-weight: 100;
+}
+.profile-image img{
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    scale: 0.95;
+}
+.Learn-more{
+    width: 125px;
+    height: 45px;
+    font-family: Roboto;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: white;
+    margin: 30px 0;
+    cursor: pointer;
+    border: 0;
+    transition: all 0.3s;
+}
+.Learn-more:hover{
+    background-color: rgb(97, 97, 97);
+    color: white;
+}
+/*About Section*/
+#AboutMe{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    padding: 70px;
+    border-bottom: 1px rgb(233, 233, 233) solid;
+    display: flex;
+}
+.mycontent{
+    width: 50%;
+    text-align: start;
+}
+
+.Section-headings{
+    font-size: 35px;
+    display: inline-block;
+    margin-bottom: 20px;
+    
+}
+.mycontent .para{
+    line-height: 30px;
+}
+.course{
+    width: 300px;
+    padding: 25px 0 0 180px;
+}
+.course .lang{
+    height: 50px;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: bold;
+}
+.course img{
+    width: 25px; 
+    height: 25px;
+}
+/* Project Section */
+#Projects{
+    width: 100%;
+    height: 600px;
+    padding: 70px;
+    padding-bottom: 20px;
+    border-bottom: 1px rgb(233, 233, 233) solid;
+}
+.projects-head{
+    text-align: start;
+    margin-bottom: 25px;
+}
+.Project-block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.Project-container{
+    position: relative;
+    width: 280px;
+    height: 345px;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: scale 0.3s;
+}
+.Project-img img{
+    width: 100%;
+    border-radius: 15px 10px 0 0;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+.Project-content{
+    width: 100%;
+    padding: 15px 25px 25px 25px;
+    text-align: start;
+}
+.Project-content h3{
+    font-size: 25px;
+    display: inline-block;
+    margin: 5px 0 20px 0;
+}
+.Project-content p{
+    margin-bottom: 15px;
+}
+.Project-content a{
+    position: absolute;
+    bottom: 25px;
+    text-decoration: none;
+    color: rgb(0, 94, 235);
+    font-weight: bold;
+}
+.Project-content a:hover{
+    color: rgb(35, 123, 255);
+    text-decoration:underline;
+}
+/*Contact*/
+#Contact{
+    width: 100%;
+    height: 480px;
+    padding: 70px;
+    display: flex;
+}
+.contact-content{
+    width: 50%;
+    text-align: start;
+}
+.contact-content .mail{
+    width: 205px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-content a{
+    width: 70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+}
+.contact-content .github:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.contact-communicate{
+    width: 50%;
+    height: 350px;
+    border: 1px solid rgba(34, 34, 34, 0.315);
+    border-radius: 8px;
+    color: rgb(128, 126, 126);
+    padding: 35px 50px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.contact-communicate .name{
+    display:block;
+    text-align: start;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.contact-communicate input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.contact-communicate .message{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 20px;
+    font-family: Roboto;
+    resize: none;
+}
+.contact-communicate button{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    font-size: larger;
+    border: 0;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.contact-communicate button:hover{
+    cursor: pointer;
+    background-color: #000;
+}
