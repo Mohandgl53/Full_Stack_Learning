@@ -3,11 +3,14 @@ import Content from "./Content"
 import Footer from "./Footer"
 import  { useState } from 'react';
 import AddList from "./AddList";
+import SearchItem from "./SearchItem";
 
 function App() {
   const [items,setItems] = useState(JSON.parse(localStorage.getItem("To-Do-List")));
 
-  const [searchItem,setSearchItem] = useState('');
+  const [newItem,setNewItem] = useState('');
+
+  const [search,setSearch] = useState('');
   
   const addItem = (item) => {
     const id = (items.length) ? items[items.length-1].id + 1 : 1;
@@ -38,10 +41,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!searchItem){ return;}
-    console.log(searchItem);
-    addItem(searchItem);
-    setSearchItem('');
+    if (!newItem){ return;}
+    console.log(newItem);
+    addItem(newItem);
+    setNewItem('');
   }
 
 
@@ -49,13 +52,16 @@ function App() {
     <div className="App">
       <Header title = "To Do List"/>
       <AddList 
-        searchItem = {searchItem}
-        setSearchItem = {setSearchItem}
+        newItem = {newItem}
+        setNewItem = {setNewItem}
         handleSubmit = {handleSubmit}
-
+      />
+      <SearchItem 
+        search = {search}
+        setSearch = {setSearch}
       />
       <Content 
-        items = {items}
+        items = {items.filter(item => (((item.text).toLowerCase()).includes(search.toLowerCase())))}
         handleCheck = {handleCheck}
         handleDelete = {handleDelete}
         handleDoubleClick = {handleDoubleClick}

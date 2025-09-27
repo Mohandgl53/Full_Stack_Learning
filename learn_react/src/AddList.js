@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaPlus} from "react-icons/fa";
 
-const AddList = ({searchItem,setSearchItem,handleSubmit}) => {
+const AddList = ({newItem,setNewItem,handleSubmit}) => {
   return (
     <form className='addForm' onSubmit={handleSubmit}>
         <label htmlFor="addItem">Add Item</label>
@@ -10,9 +10,9 @@ const AddList = ({searchItem,setSearchItem,handleSubmit}) => {
             type="text"
             id = "addItem"
             placeholder='Add Item'
-            required 
-            value={searchItem}
-            onChange={(e) => setSearchItem(e.target.value)}
+            required
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
         />
         <button 
             type='submit'
