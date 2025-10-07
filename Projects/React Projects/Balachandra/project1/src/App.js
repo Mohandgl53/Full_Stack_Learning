@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import ColorBox from './ColorBox';
+import TextColor from './TextColor';
+import ToggleColor from './ToggleColor';
 
 function App() {
+  const [color,setColor] = useState("");
+  
+  const [textColor,setTextColor] = useState("#000000ff");
+  const handleTextColor = () => {
+    const x = textColor==="#000000ff" ? "#ffffffff" : "#000000ff";
+    setTextColor(x);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ColorBox
+        color = {color}
+        setColor = {setColor}
+        textColor = {textColor}
+        setTextColor = {setTextColor}
+      />
+      <TextColor
+        color = {color}
+        setColor = {setColor}
+      />
+      <ToggleColor
+        handleTextColor={handleTextColor}
+      />
     </div>
   );
 }
