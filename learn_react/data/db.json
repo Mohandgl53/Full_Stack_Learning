@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "checked": false,
+      "item": "Visit balachandra.in"
+    },
+    {
+      "id": "2",
+      "checked": true,
+      "item": "AI"
+    },
+    {
+      "id": "3",
+      "checked": false,
+      "item": "learn react"
+    },
+    {
+      "id": "4",
+      "checked": false,
+      "item": "CRUD Operations"
+    }
+  ]
+}

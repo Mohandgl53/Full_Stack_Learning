@@ -6,9 +6,9 @@ import ToggleColor from './ToggleColor';
 function App() {
   const [color,setColor] = useState("");
   
-  const [textColor,setTextColor] = useState("#000000ff");
+  const [textColor,setTextColor] = useState("black");
   const handleTextColor = () => {
-    const x = textColor==="#000000ff" ? "#ffffffff" : "#000000ff";
+    const x = textColor==="black" ? "white" : "black";
     setTextColor(x);
   }
 
