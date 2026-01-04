@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Data = ({content,setContent}) => {
+const Data = ({content}) => {
   return (
     <div className='dataList'>
         <ul>

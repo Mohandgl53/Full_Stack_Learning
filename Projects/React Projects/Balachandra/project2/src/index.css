@@ -25,9 +25,13 @@ button{
   width: 33.3%;
   height: 40px;
 }
+button:hover{
+  cursor: pointer;
+}
 button:active{
   background-color:black ;
   color: white;
+  cursor: pointer;
 }
 li{
   line-height: 35px;

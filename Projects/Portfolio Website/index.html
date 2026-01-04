@@ -64,7 +64,8 @@
                     <div class="todolist-content Project-content">
                         <h3>To-Do List</h3>
                         <p>Build a interactive To do List.</p>
-                        <a href="#" class="githubProject">View on Github</a>
+                        <a href="https://github.com/Mohandgl53/Full_Stack_Learning/tree/master/Projects/To-Do-List"
+                            class="githubProject">View on Github</a>
                     </div>
                 </div>
                 <div class="Project-container">
@@ -74,9 +75,10 @@
                     <div class="Project-content">
                         <h3>Profile Card</h3>
                         <p>Build a Simple Card with my Profile.</p>
-                        <a href="#" class="githubProject">View on Github</a>
+                        <a href="https://github.com/Mohandgl53/Full_Stack_Learning/tree/master/Projects/Profile_Card"
+                            class="githubProject">View on Github</a>
                     </div>
-                </div> 
+                </div>
                 <div class="Project-container">
                     <div class="Project-img">
                         <img src="images/Screenshot 2025-09-11 201448.png" alt="">
@@ -84,24 +86,48 @@
                     <div class="Project-content">
                         <h3>Calculator</h3>
                         <p>Build a Calculator using JavaScript.</p>
-                        <a href="#" class="githubProject">View on Github</a>
+                        <a href="https://github.com/Mohandgl53/Full_Stack_Learning/tree/master/Projects/Calculator-js"
+                            class="githubProject">View on Github</a>
                     </div>
-                </div> 
+                </div>
             </div>
         </section>
         <section id="Contact">
             <div class="contact-content">
                 <h2 class="Section-headings">Contact</h2>
                 <p>Feel free to reach out to me.</p>
-                <div class="mail"><img src="images/image.png" alt="" width="18px" height="18px">mohandgl53@gmail.com</div>
-                <div class="github"><a href="#"><img src="images/github.png" alt="" width="18px" height="18px"><p>Github</p></a></div>
+
+                <div class="mail">
+                    <img src="images/image.png" alt="" width="18px" height="18px">
+                    mohandgl53@gmail.com
+                </div>
+
+                <div class="github">
+                    <a href="https://github.com/Mohandgl53">
+                        <img src="images/github.png" alt="" width="18px" height="18px">
+                        <p>Github</p>
+                    </a>
+                </div>
             </div>
+
             <div class="contact-communicate">
-                <form action="">
-                    <label for="message" class="name">Name</label>
-                    <input type="email" placeholder="Email" class="email">
-                    <textarea name="message" class="message" placeholder="Message"></textarea>
-                    <button type="submit"> Send Message</button>
+                <!-- WORKING FORM -->
+                <form action="3e26122b42dc42811405138d60126a7e" method="POST">
+
+                    <!-- Disable captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!-- (Optional) Redirect to thank-you page -->
+                    <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html"> -->
+
+                    <label for="name" class="name">Name</label>
+                    <input type="text" name="name" placeholder="Your Name" required>
+
+                    <input type="email" name="email" placeholder="Email" class="email" required>
+
+                    <textarea name="message" class="message" placeholder="Message" required></textarea>
+
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </section>

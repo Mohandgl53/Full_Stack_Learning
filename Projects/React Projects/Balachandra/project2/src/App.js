@@ -40,11 +40,10 @@ function App() {
       <Buttons
         activeButton = {activeButton}
         ButtonSelector = {ButtonSelector}
-        changeUsers = {changeContent}
+        changeContent = {changeContent}
       />
       <Data 
         content = {content}
-        setContent = {setContent}
       />
     </main>
   );
